@@ -6,7 +6,7 @@
 /*   By: mbueno-g <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 17:18:39 by mbueno-g          #+#    #+#             */
-/*   Updated: 2021/07/21 14:15:35 by mbueno-g         ###   ########.fr       */
+/*   Updated: 2021/09/02 16:08:37 by mbueno-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ char	*get_line(int fd, char **aux, int i, char *line)
 			if (*line)
 				return (line);
 		}
-		str = ft_strjoin(aux[fd], ptr);
+		str = ft_strjoin_gnl(aux[fd], ptr);
 		ft_strdel(&aux[fd]);
 		aux[fd] = str;
 		if (i < 0)

@@ -6,13 +6,13 @@
 /*   By: mbueno-g <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/20 17:20:16 by mbueno-g          #+#    #+#             */
-/*   Updated: 2021/07/21 14:08:08 by mbueno-g         ###   ########.fr       */
+/*   Updated: 2021/09/02 16:07:59 by mbueno-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-size_t	ft_strlen(const char *str)
+size_t	ft_strlen_gnl(const char *str)
 {
 	size_t	i;
 
@@ -24,7 +24,7 @@ size_t	ft_strlen(const char *str)
 	return (i);
 }
 
-char	*ft_strjoin(char *s1, char *s2)
+char	*ft_strjoin_gnl(char *s1, char *s2)
 {
 	char		*x;
 	int			i;
@@ -32,7 +32,7 @@ char	*ft_strjoin(char *s1, char *s2)
 
 	if (!s1 || !s2)
 		return (NULL);
-	x = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	x = malloc(ft_strlen_gnl(s1) + ft_strlen_gnl(s2) + 1);
 	if (!x)
 		return (NULL);
 	i = 0;
@@ -46,11 +46,11 @@ char	*ft_strjoin(char *s1, char *s2)
 	return (x);
 }
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strchr_gnl(const char *s, int c)
 {
 	if (c == '\0')
 	{
-		s = s + ft_strlen((char *)s);
+		s = s + ft_strlen_gnl((char *)s);
 		return ((char *)s);
 	}
 	while (*s)
@@ -62,7 +62,7 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr_gnl(char const *s, unsigned int start, size_t len)
 {
 	char	*ptr;
 	size_t	i;
@@ -71,7 +71,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	if (!s)
 		return (NULL);
-	l = ft_strlen(s);
+	l = ft_strlen_gnl(s);
 	if (len > l)
 		len = l;
 	ptr = malloc(len + 1);
@@ -86,7 +86,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (ptr);
 }
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memcpy_gnl(void *dst, const void *src, size_t n)
 {
 	char		*d;
 	const char	*s;	
