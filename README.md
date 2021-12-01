@@ -6,6 +6,8 @@ WIP 🚧
 
 :collision: [New concept](#new-concept): File descriptor + buffer size + static variables
 
+:footprints: [Step by step](#step-by-step)
+
 <!-- :bookmark_tabs: [Push_swap example](#push_swap-example)
 
 :collision: [New concept](#new-concept): Bitwise operators
@@ -14,8 +16,13 @@ WIP 🚧
 
 ## Introduction 
 
-The aim of the get_next_line proyect is to write a function that returns a line read from a file descriptor.
-What we call a line is a succession of characters that end with '\n' (newline) or with EOF (End Of File).
+The aim of the get_next_line proyect is to write a function that returns a line read from a file descriptor. What we call a line is a succession of characters that end with '\n' (newline) or with EOF (End Of File).
+The prototype of the function to code is:
+```C
+char  *get_next_line(int fd);
+```
+The only parameter is a file descriptor of the file we want to read line by line and the return value is the read line or NULL if any error occurs.
+
 
 ## New concept
 ### File descriptor
@@ -41,7 +48,10 @@ Static variables are a unique type of variables with some special properties
 They are able to preserve their value even after they are out of their scope (i.e. the static variable remains in memory while the program is running), so they are not initialized again in a new scope.
 
 The syntax is:
-```
+```C
 static <data type> <var name>;
 ```
+
+## Step by step
+
 
