@@ -40,7 +40,7 @@ files at the same time.
 
 ### Buffer size
 The buffer size is the amount of characters that our program is reading at one.
-Our program must compile with the flag -D BUFFER_SIZE=XX to change the value of the buffer size macro.
+Our program must compile with the flag ``-D BUFFER_SIZE=XX`` to change the value of the buffer size macro.
 sta
 
 ### Static variables
