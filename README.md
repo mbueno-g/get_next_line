@@ -51,7 +51,7 @@ The syntax is:
 ```C
 static <data type> <var name>;
 ```
-
+<!--
 ## Step by step
 
-
+-->
